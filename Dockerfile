@@ -1,2 +1,5 @@
-FROM tomcat:8.0.21-jre8
-COPY target/maven-web-application.war /usr/local/tomcat/webapps/maven-web-application.war
+FROM httpd
+MAINTAINER name mustafa
+LABEL this is my app image
+EXPOSE 80
+COPY . /usr/local/apache2/htdocs/
